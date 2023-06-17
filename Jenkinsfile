@@ -15,7 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm i --legacy-peer-deps'
-                sh 'npm install axios'
+                sh 'npm audit fix --force'
             }
         }
         stage('Test') {
